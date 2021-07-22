@@ -1,0 +1,44 @@
+#############
+# i3-status #
+#############
+
+# Test = ß
+
+general {
+        colors = true
+	color_good = "#FFFFFF"
+	color_bad = "#ff5050"
+	color_degraded = "#ff8000"
+        interval = 5
+}
+
+order += "volume master"
+order += "battery all"
+order += "tztime local"
+
+volume master {
+	format = "volume:%volume"
+	format_muted = "volume:mute"
+	device = "pulse"
+	min_width = "100"
+	align = "center"
+}
+
+battery all {
+    format = "|  %status %percentage  |"
+	hide_seconds = "true"
+	min_width = "100"
+	align = "center"
+	format_down = "battery|no"
+	status_chr = "battery|charging"
+	status_bat = "battery:"
+	status_unk = "battery|unknown"
+	status_full = "battery|full"
+	integer_battery_capacity = "true"
+}
+
+tztime local {
+    format = "%A, %B-%d-%Y | %H:%M:%S  "
+	min_width = "100"
+	align = "center"
+}
