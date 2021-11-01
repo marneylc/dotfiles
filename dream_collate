@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+while getopts d: flag
+do
+    case "${flag}" in
+        d) DATERANGE=${OPTARG};;
+    esac
+done
+
+unzip "Export*"
+FILENAME="Dreams $DATERANGE.md"
+touch dreams
+
+for f in $(ls -tr | grep md); do cat $f; echo; echo; done >> dreams
+
+sed -i -e '/Created:/d' -e '/Tags:/d' dreams
+sed -i 's/# Dream/#### Dream/' dreams
+sed -i '/^$/N;/^\n$/D' dreams
+
+echo "### Dreams $DATERANGE" > "$FILENAME"
+cat dreams >> "$FILENAME"
+rm dreams
+
+IFS=$SAVEIFS
