@@ -22,7 +22,7 @@ sed -i -e '/Created:/d' -e '/Tags:/d' dreams
 sed -i 's/# Dream/#### Dream/' dreams
 sed -i '/^$/N;/^\n$/D' dreams
 
-echo "### Luke's Dreams $DATERANGE" > "$FILENAME"
+echo "## Luke's Dreams $DATERANGE" > "$FILENAME"
 cat dreams >> "$FILENAME"
 rm dreams
 
