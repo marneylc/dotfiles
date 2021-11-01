@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# to install pandoc for md to pdf convert with apt use:
+# sudo apt-get install pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
 
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
@@ -20,7 +22,7 @@ sed -i -e '/Created:/d' -e '/Tags:/d' dreams
 sed -i 's/# Dream/#### Dream/' dreams
 sed -i '/^$/N;/^\n$/D' dreams
 
-echo "### Dreams $DATERANGE" > "$FILENAME"
+echo "### Luke's Dreams $DATERANGE" > "$FILENAME"
 cat dreams >> "$FILENAME"
 rm dreams
 
