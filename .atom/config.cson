@@ -1,0 +1,43 @@
+"*":
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+  "autocomplete-plus":
+    fileBlacklist: [
+      ".*"
+      "*.md"
+      "*.txt"
+    ]
+  "autocomplete-python":
+    useKite: false
+  core:
+    disabledPackages: [
+      "language-gfm"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "nucleus-dark-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    fontSize: 13
+  "exception-reporting":
+    userId: "255c15fa-cc48-4f25-87e7-f68ee93d6cda"
+  "go-plus":
+    disabledBundledPackages: [
+      "go-debug"
+      "go-signature-statusbar"
+      "atom-ide-ui"
+    ]
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#005acd"
+      zBright:
+        brightBlue: "#005aff"
+    iconColors:
+      blue: "#005aff"
+    style:
+      theme: "homebrew"
+  welcome:
+    showOnStartup: false
