@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+for f in $(ls -tr | grep md); 
+    do 
+        NAME=$(head -n1 $f | sed -e 's/^[[#]]*//' | sed -e 's/^[[:space:]]*//');
+        FILETYPE=".md"
+        FULLNAME=$NAME$FILETYPE
+        mv $f $FULLNAME
+    done 
+
+IFS=$SAVEIFS
