@@ -21,6 +21,7 @@ alias ls='ls --color=auto'
 alias v=nvim
 alias githubsignin="eval '$(ssh-agent -s)' && ssh-add $HOME/keys/github_marneylc"
 alias vtop="vtop --theme nord"
+alias discord="/home/salamander/.local/share/flatpak/exports/bin/com.discordapp.Discord"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
