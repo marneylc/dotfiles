@@ -54,8 +54,17 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+## new setting for popos and i3
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+
+## old setting for only arch and i3
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+# trackpad tap to click
+xinput set-prop "UNIW0001:00 093A:0255 Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "UNIW0001:00 093A:0255 Touchpad" "libinput Tapping Enabled Default" 1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
