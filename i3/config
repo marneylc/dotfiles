@@ -4,6 +4,7 @@ gaps outer 2
 exec --no-startup-id exec bash $HOME/.fehbg
 exec --no-startup-id compton --backend glx
 exec --no-startup-id exec bash $HOME/redshift_dimlights.sh
+exec --redshift -l 44:-123
 
 # Font for window titles. Will also be used by the bar unless a different font
 font pango:Inconsolata 10
