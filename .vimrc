@@ -34,6 +34,7 @@ set number
 set hidden
 syntax enable
 colorscheme elflord
+hi Normal guibg=NONE ctermbg=NONE
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab " fixing yaml indentation errors
 set clipboard=unnamedplus
 
@@ -48,3 +49,6 @@ map <tab> :NERDTreeToggle<CR>
 " open filename in the new viewport.
 " Ctrl-w r moves viewports clockwise.
 " Ctrl-w R moves viewports counter-clockwise.
+
+" show hidden files with NERDTree
+let NERDTreeShowHidden=1

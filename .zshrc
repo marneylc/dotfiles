@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/salamander/.oh-my-zsh"
+export ZSH="/home/marneyl/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -19,7 +19,7 @@ ZSH_THEME="xiong-chiamiov"
 ###############
 alias ls='ls --color=auto'
 alias v=nvim
-alias githubsignin="eval '$(ssh-agent -s)' && ssh-add $HOME/keys/github_marneylc"
+alias gh="eval '$(ssh-agent -s)' && ssh-add $HOME/keys/github_marneylc"
 alias vtop="vtop --theme nord"
 alias discord="/home/salamander/.local/share/flatpak/exports/bin/com.discordapp.Discord"
 
